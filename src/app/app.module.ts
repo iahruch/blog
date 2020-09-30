@@ -7,7 +7,8 @@ import { MainLayoutComponent } from './shared/main-layout/main-layout.component'
 import { HomePageComponent } from './home-page/home-page.component';
 import { PostPageComponent } from './post-page/post-page.component';
 import { PostComponent } from './post/post.component';
-import {SharedModule} from "./admin/shared/shared.module";
+import {SharedModule} from './shared/shared.module';
+import {AuthInterceptor} from "./shared/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {SharedModule} from "./admin/shared/shared.module";
     AppRoutingModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [AuthInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

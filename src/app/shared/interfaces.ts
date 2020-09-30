@@ -12,3 +12,11 @@ export class IAtuhResponce {
   localId:	string;
   registered:	boolean;
 }
+
+export class IPost {
+  id?: string;
+  title: string;
+  text: string;
+  author: string;
+  date: Date;
+}

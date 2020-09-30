@@ -6,4 +6,5 @@ export  interface EnvironmentInterface {
     storageBucket: string;
     messagingSenderId: string;
     production: boolean;
+    fbDBUrl: string;
 }

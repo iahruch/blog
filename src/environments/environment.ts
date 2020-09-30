@@ -10,7 +10,8 @@ export const environment = {
   projectId: "angular-blog-1ba84",
   storageBucket: "angular-blog-1ba84.appspot.com",
   messagingSenderId: "941975590648",
-  appId: "1:941975590648:web:cad525cd1ddd2f793fcd0d"
+  appId: "1:941975590648:web:cad525cd1ddd2f793fcd0d",
+  fbDBUrl: 'https://angular-blog-1ba84.firebaseio.com/',
 };
 
 
