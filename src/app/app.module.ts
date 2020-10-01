@@ -9,6 +9,8 @@ import { PostPageComponent } from './post-page/post-page.component';
 import { PostComponent } from './post/post.component';
 import {SharedModule} from './shared/shared.module';
 import {AuthInterceptor} from "./shared/auth.interceptor";
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import {AuthInterceptor} from "./shared/auth.interceptor";
     AppRoutingModule,
     SharedModule,
   ],
-  providers: [AuthInterceptor],
+  providers: [  {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
